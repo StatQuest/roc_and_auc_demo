@@ -94,7 +94,6 @@ tail(roc.df) ## tail() will show us the values for the lower left-hand corner
 ## now let's look at the thresholds between TPP 60% and 80%...
 roc.df[roc.df$tpp > 60 & roc.df$tpp < 80,]
 
-
 ## We can calculate the area under the curve...
 roc(obese, glm.fit$fitted.values, plot=TRUE, legacy.axes=TRUE, percent=TRUE, xlab="False Positive Percentage", ylab="True Postive Percentage", col="#377eb8", lwd=4, print.auc=TRUE)
 
@@ -122,7 +121,6 @@ roc(obese, glm.fit$fitted.values, plot=TRUE, legacy.axes=TRUE, percent=TRUE, xla
 
 plot.roc(obese, rf.model$votes[,1], percent=TRUE, col="#4daf4a", lwd=4, print.auc=TRUE, add=TRUE, print.auc.y=40)
 legend("bottomright", legend=c("Logisitic Regression", "Random Forest"), col=c("#377eb8", "#4daf4a"), lwd=4)
-
 
 
 #######################################
